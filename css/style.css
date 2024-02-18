@@ -1,3 +1,185 @@
 /* remember that style sheets cascade, so whatever is on the bottom will override whats on top. Don't have multiple statements for the same element. Organization and hierarchy are key, start with larger elements and work your way down.
 
 Do they best you can with this, talk with each other and help each other. Most colors and fonts are provided for you. Use adobe color to find the other colors from the sample image.*/
+/* General styles and resets */
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css?family=Lato:400|Josefin+Sans:600,700');
+
+/* Resetting default styles */
+body, h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Body and global styles */
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+}
+
+/* Navigation styles */
+nav {
+  background-color: #3A400C; /* Sample color code */
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+/* Header styles */
+header {
+  background-color: #047F8C; /* Sample color code */
+  color: #FFFFFF;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 60px;
+  padding: 20px 0;
+}
+
+/* Wrap class */
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Article styles */
+section article {
+  width: 70%;
+}
+
+section article img {
+  width: 100%;
+  height: auto;
+}
+
+section article h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 37px;
+  color: #3A400C; /* Sample color code */
+}
+
+section article h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 22.5px;
+  color: #3A400C; /* Sample color code */
+}
+
+/* Sidebar styles */
+aside {
+    width: 30%;
+  }
+  
+  aside h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #3A400C; /* Sample color code */
+  }
+  
+  aside p {
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  aside img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  /* Recent Issues List styles */
+  aside ul {
+    list-style: none;
+  }
+  
+  aside ul li a {
+    text-decoration: none;
+    color: #3A400C; /* Sample color code */
+    font-family: 'Lato', sans-serif;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #4A4DBF; /* Sample color code */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  footer .wrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  footer hr {
+    margin-top: 20px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+  }
+  
+  footer p {
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  
+  /* Specific style for copyright paragraph in footer */
+  footer p.copy {
+    color: #EEE;
+    font-size: 12px;
+  }
+  
+  /* Social Links styles */
+  .social-links a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+  }
+  
+  /* Utility classes */
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    .wrap {
+      flex-direction: column;
+    }
+  
+    aside, section article {
+      width: 100%;
+    }
+  
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav a {
+      width: 100%;
+      text-align: center;
+    }
+  
+    footer .wrap {
+      flex-direction: column;
+    }
+  }  
