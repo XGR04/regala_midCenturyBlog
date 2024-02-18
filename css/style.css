@@ -1,185 +1,156 @@
-/* remember that style sheets cascade, so whatever is on the bottom will override whats on top. Don't have multiple statements for the same element. Organization and hierarchy are key, start with larger elements and work your way down.
+/* Apply a general reset to remove default browser padding and margin */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
 
-Do they best you can with this, talk with each other and help each other. Most colors and fonts are provided for you. Use adobe color to find the other colors from the sample image.*/
-/* General styles and resets */
-/* Google Font Import */
+/* Remove the underline from all links */
+a {
+    text-decoration: none;
+}
+
+/* Import fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Lato:400|Josefin+Sans:600,700');
 
-/* Resetting default styles */
-body, h1, h2, h3, h4, h5, h6, p, ul {
-  margin: 0;
-  padding: 0;
-}
-
-/* Body and global styles */
+/* Apply general body styles */
 body {
-  font-family: 'Lato', sans-serif;
-  font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    background-color: #f19a4d;
+    color: #333;
+    padding: 0px 100px 0px 100px; 
 }
 
-/* Navigation styles */
+/* Style the navigation */
 nav {
-  background-color: #3A400C; /* Sample color code */
-  color: #FFFFFF;
-  display: flex;
-  justify-content: center;
+    background-color: #cde3f1;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5%;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
+    color: #047f8c;
+    font-size: 16px;
+    font-weight: 600; /* Make the font semi-bold */
 }
 
-/* Header styles */
+/* Style the header */
 header {
-  background-color: #047F8C; /* Sample color code */
-  color: #FFFFFF;
-  text-align: center;
+    color: #3A400C;
+    background-color: #cde3f1;
+    padding: 20px 5%;
+    text-align: center;
 }
 
 header h1 {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 60px;
-  padding: 20px 0;
-}
-
-/* Wrap class */
-.wrap {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-/* Article styles */
-section article {
-  width: 70%;
-}
-
-section article img {
-  width: 100%;
-  height: auto;
-}
-
-section article h2 {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 37px;
-  color: #3A400C; /* Sample color code */
-}
-
-section article h3 {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 22.5px;
-  color: #3A400C; /* Sample color code */
-}
-
-/* Sidebar styles */
-aside {
-    width: 30%;
-  }
-  
-  aside h3 {
+    font-size: 37px;
     font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700; /* Make the font bold */
+}
+
+/* Style the main content section */
+section {
+    background-color: #cde3f1; /* Set the background color for the content */
+    padding: 20px 5%; /* Add padding to the content area */
+    text-align: justify; /* Justify the text for uniform alignment */
+}
+
+.wrap {
+    background-color: #cde3f1; /* Extend the background color down to the footer */
+    padding: 20px 5%;
+}
+
+article h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #3A400C;
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+article h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #3A400C;
     font-size: 18px;
-    margin-bottom: 10px;
-    color: #3A400C; /* Sample color code */
-  }
-  
-  aside p {
-    font-family: 'Lato', sans-serif;
+    margin: 10px 0;
+}
+
+article p {
+    font-size: 15px;
     margin-bottom: 20px;
-  }
-  
-  aside img {
+}
+
+/* Style images inside the article */
+article img {
     width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  /* Recent Issues List styles */
-  aside ul {
-    list-style: none;
-  }
-  
-  aside ul li a {
-    text-decoration: none;
-    color: #3A400C; /* Sample color code */
-    font-family: 'Lato', sans-serif;
-  }
-  
-  /* Footer styles */
-  footer {
-    background-color: #4A4DBF; /* Sample color code */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  footer .wrap {
+    display: block;
+    margin: 20px auto; /* Center the image */
+}
+
+/* Style the smaller images in a row */
+#aside img {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  footer hr {
-    margin-top: 20px;
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
-  }
-  
-  footer p {
-    font-family: 'Lato', sans-serif;
-    font-size: 15px;
-  }
-  
-  .footer-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-  }
-  
-  /* Specific style for copyright paragraph in footer */
-  footer p.copy {
-    color: #EEE;
-    font-size: 12px;
-  }
-  
-  /* Social Links styles */
-  .social-links a {
-    text-decoration: none;
-    color: white;
+    justify-content: space-between; /* Distribute space evenly between images */
+    margin-bottom: 20px; /* Add space below the image row */
+}
+
+#aside img {
+    width: 30%; /* Smaller width for the smaller images */
+    margin-right: 5%; /* Add space between the images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Remove margin for the last image in the row */
+#aside:last-child {
+    margin-right: 0;
+}
+
+/* Style the footer */
+footer {
+    background-color: #FFF;
+    color: #3A400C;
+    padding: 20px 5%;
+    text-align: center;
+}
+
+footer a {
+    color: #3A400C;
+}
+
+.social-links a {
     margin: 0 10px;
-  }
-  
-  /* Utility classes */
-  .clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Responsive design adjustments */
-  @media (max-width: 768px) {
-    .wrap {
-      flex-direction: column;
-    }
-  
-    aside, section article {
-      width: 100%;
-    }
-  
-    nav {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    nav a {
-      width: 100%;
-      text-align: center;
-    }
-  
-    footer .wrap {
-      flex-direction: column;
-    }
-  }  
+}
+
+/* Style the copyright paragraph */
+footer p {
+    font-size: 15px;
+}
+
+/* Style the list of issues and about us */
+aside {
+    margin: 20px 5%;
+}
+
+aside h3, aside p, aside ul {
+    margin-bottom: 15px;
+}
+
+aside ul {
+    list-style-type: none;
+}
+
+aside li a {
+    color: #3A400C;
+    font-size: 15px;
+}
+
+/* Add hover effect for links */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Adjustments for responsive design can be made below */
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+}
