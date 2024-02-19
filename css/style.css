@@ -17,7 +17,7 @@ body {
     font-family: 'Lato', sans-serif;
     line-height: 1.6;
     background-color: #f19a4d;
-    color: #333;
+    color: #3A400C;
     padding: 0px 100px 0px 100px; 
 }
 
@@ -43,11 +43,12 @@ header {
     background-color: #cde3f1;
     padding: 20px 5%;
     text-align: center;
+    
 }
 header h1 {
     font-size: 37px;
     font-family: 'Josefin Sans', sans-serif;
-    font-weight: 700; /* Make the font bold */
+    font-weight: 600; /* Make the font bold */
 }
 
 
@@ -61,21 +62,24 @@ section {
     background-color: #cde3f1; /* Extend the background color down to the footer */
     padding: 20px 5%;
 }
-article h2 {
-    font-family: 'Josefin Sans', sans-serif;
+h2 {
+    font-family: 'lato';
     color: #3A400C;
-    font-size: 30px;
-    margin: 20px 0;
+    font-size: 22.5px;
+    font-weight: 700;
 }
-article h3 {
+h3 {
     font-family: 'Josefin Sans', sans-serif;
     color: #047f8c;
     font-size: 18px;
+    font-weight: 600;
     margin: 10px 0;
 }
-article p {
+ p {
+    font-family: 'lato';
     font-size: 15px;
     margin-bottom: 20px;
+    font-weight: 400;
 }
 
 
@@ -115,6 +119,8 @@ footer a {
 footer p {
     font-size: 15px;
     color: #3A400C;
+    font-family: 'lato';
+    font-weight: 400;
 }
 .social-links a {
     margin: 0 10px;
@@ -129,8 +135,10 @@ aside h3, aside p, aside ul {
     margin-bottom: 15px;
 }
 aside li a {
+    font-family: 'Josefin Sans', sans-serif;
     color: #3A400C;
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: 600;
 }
 /* Add hover effect for links */
 a:hover {
