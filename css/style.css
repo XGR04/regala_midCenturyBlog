@@ -21,6 +21,7 @@ body {
     padding: 0px 100px 0px 100px; 
 }
 
+
 /* Style the navigation */
 nav {
     background-color: #cde3f1;
@@ -29,12 +30,12 @@ nav {
     padding: 10px 5%;
     font-family: 'Josefin Sans', sans-serif;
 }
-
 nav a {
     color: #047f8c;
     font-size: 16px;
     font-weight: 600; /* Make the font semi-bold */
 }
+
 
 /* Style the header */
 header {
@@ -43,12 +44,12 @@ header {
     padding: 20px 5%;
     text-align: center;
 }
-
 header h1 {
     font-size: 37px;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 700; /* Make the font bold */
 }
+
 
 /* Style the main content section */
 section {
@@ -56,30 +57,27 @@ section {
     padding: 20px 5%; /* Add padding to the content area */
     text-align: justify; /* Justify the text for uniform alignment */
 }
-
 .wrap {
     background-color: #cde3f1; /* Extend the background color down to the footer */
     padding: 20px 5%;
 }
-
 article h2 {
     font-family: 'Josefin Sans', sans-serif;
     color: #3A400C;
     font-size: 30px;
     margin: 20px 0;
 }
-
 article h3 {
     font-family: 'Josefin Sans', sans-serif;
-    color: #3A400C;
+    color: #047f8c;
     font-size: 18px;
     margin: 10px 0;
 }
-
 article p {
     font-size: 15px;
     margin-bottom: 20px;
 }
+
 
 /* Style images inside the article */
 article img {
@@ -87,71 +85,54 @@ article img {
     display: block;
     margin: 20px auto; /* Center the image */
 }
-
-/* Style the smaller images in a row */
-#aside img {
+.row {
     display: flex;
-    justify-content: space-between; /* Distribute space evenly between images */
+    align-items: center;
     margin-bottom: 20px; /* Add space below the image row */
-}
-
-#aside img {
-    width: 30%; /* Smaller width for the smaller images */
-    margin-right: 5%; /* Add space between the images */
+  }
+  /* Style for each image inside the .row container */
+.row img {
+    width: calc(33.333% - 10px); /* Subtracting margin from the width if you have 3 images */
+    margin: 0 5px; /* This gives 10px space between images */
     height: auto; /* Maintain aspect ratio */
-}
+  }
 
-/* Remove margin for the last image in the row */
-#aside:last-child {
-    margin-right: 0;
-}
 
 /* Style the footer */
 footer {
     background-color: #04adbf; /* Dark teal background color for the footer */
-    color: #FFF; /* White text color for contrast */
+    color: #3A400C;; /* White text color for contrast */
     padding: 20px 0;
     text-align: center;
     width: 100%; /* Ensure the footer extends fully to the edges */
+    border-top: none; /* If there is a border, remove it */
 }
-
 footer a {
     color: #3A400C;
+    margin: 0 10px;
 }
-
+/* Style the copyright paragraph */
+footer p {
+    font-size: 15px;
+    color: #3A400C;
+}
 .social-links a {
     margin: 0 10px;
 }
 
-/* Style the copyright paragraph */
-footer p {
-    font-size: 15px;
-}
 
 /* Style the list of issues and about us */
 aside {
     margin: 20px 5%;
 }
-
 aside h3, aside p, aside ul {
     margin-bottom: 15px;
 }
-
-aside ul {
-    list-style-type: none;
-}
-
 aside li a {
     color: #3A400C;
     font-size: 15px;
 }
-
 /* Add hover effect for links */
 a:hover {
     text-decoration: underline;
-}
-
-/* Adjustments for responsive design can be made below */
-@media (max-width: 768px) {
-    /* Adjust styles for smaller screens */
 }
